@@ -6,7 +6,7 @@ volumes:
 services:
   backend:
     image: backend:1.0.0
-    command: sh -c "sleep 10 && node /opt/backend/index.js" #adding delay to backend because backend is running before sql is up
+    command: sh -c "sleep 10 && node /opt/backend/index.js" #adding delay to backend as backend is running before sql is up
     networks:
     - expense
     container_name: backend
