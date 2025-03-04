@@ -23,7 +23,7 @@ services:
    networks:
    - expense
    container_name: frontend
-   depends_on:
-   - backend
    ports:
    - 80:80
+   depends_on:
+   - backend
