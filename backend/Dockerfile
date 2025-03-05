@@ -1,3 +1,4 @@
+#builder
 #FROM node:20
 FROM node:20.18.3-alpine3.21  as builder
 #using this image as baseOS to reduce backend image size
@@ -6,6 +7,7 @@ COPY package.json ./
 COPY *.js ./
 RUN npm install 
 
+#runner
 FROM node:20.18.3-alpine3.21 
 RUN addgroup -S expense && adduser -S expense -G expense && \
 #command to create user and grp in alpine
